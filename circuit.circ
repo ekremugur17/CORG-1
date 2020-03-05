@@ -1770,6 +1770,10 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
     </comp>
+    <comp lib="7" loc="(730,339)" name="Text">
+      <a name="text" val="AR"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
     <comp lib="0" loc="(470,180)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
@@ -1778,7 +1782,7 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="7" loc="(427,326)" name="Text">
-      <a name="text" val="OutASel"/>
+      <a name="text" val="OutDSel"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="6" loc="(460,400)" name="Hex Digit Display"/>
@@ -1790,6 +1794,10 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     </comp>
     <comp lib="6" loc="(1050,560)" name="Hex Digit Display"/>
     <comp lib="6" loc="(1100,560)" name="Hex Digit Display"/>
+    <comp lib="7" loc="(730,450)" name="Text">
+      <a name="text" val="SP"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
     <comp lib="0" loc="(480,220)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
@@ -1811,7 +1819,7 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="7" loc="(1151,536)" name="Text">
-      <a name="text" val="OutA"/>
+      <a name="text" val="OutC"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="0" loc="(1180,750)" name="Pin">
@@ -1821,7 +1829,7 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     </comp>
     <comp loc="(770,350)" name="8 bit register"/>
     <comp lib="7" loc="(427,296)" name="Text">
-      <a name="text" val="OutASel"/>
+      <a name="text" val="OutCSel"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="0" loc="(1020,610)" name="Splitter">
@@ -1862,7 +1870,11 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="enable" val="false"/>
     </comp>
     <comp lib="7" loc="(1155,667)" name="Text">
-      <a name="text" val="OutB"/>
+      <a name="text" val="OutD"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(731,230)" name="Text">
+      <a name="text" val="PC"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="6" loc="(1060,690)" name="Hex Digit Display"/>
