@@ -78,25 +78,25 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(190,110)" to="(230,110)"/>
     <wire from="(150,40)" to="(150,70)"/>
     <wire from="(130,40)" to="(150,40)"/>
-    <comp lib="0" loc="(70,120)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp loc="(490,190)" name="8 bit register"/>
-    <comp loc="(300,290)" name="8 bit register"/>
     <comp loc="(190,110)" name="8 bit register"/>
-    <comp lib="0" loc="(150,180)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
     <comp lib="0" loc="(90,90)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(130,40)" name="Clock"/>
+    <comp lib="0" loc="(70,120)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
     <comp lib="0" loc="(230,110)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
+    </comp>
+    <comp loc="(490,190)" name="8 bit register"/>
+    <comp loc="(300,290)" name="8 bit register"/>
+    <comp lib="0" loc="(150,180)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
   <circuit name="16 bit register">
@@ -522,74 +522,9 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(540,1100)" to="(720,1100)"/>
     <wire from="(720,1100)" to="(730,1100)"/>
     <wire from="(710,1210)" to="(720,1210)"/>
-    <comp lib="1" loc="(840,1290)" name="XOR Gate"/>
-    <comp lib="5" loc="(1460,1220)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
+    <comp lib="1" loc="(750,1580)" name="OR Gate">
+      <a name="inputs" val="6"/>
     </comp>
-    <comp lib="0" loc="(310,210)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="3" loc="(1180,1440)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(740,680)" name="XOR Gate"/>
-    <comp lib="1" loc="(670,670)" name="AND Gate"/>
-    <comp lib="1" loc="(770,1580)" name="NOT Gate"/>
-    <comp lib="1" loc="(720,520)" name="NOT Gate"/>
-    <comp lib="0" loc="(210,210)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="5" loc="(1460,430)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="1" loc="(740,1780)" name="OR Gate">
-      <a name="inputs" val="7"/>
-    </comp>
-    <comp lib="0" loc="(1600,1970)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="1" loc="(770,1370)" name="NOT Gate"/>
-    <comp lib="1" loc="(800,530)" name="XOR Gate"/>
-    <comp lib="0" loc="(1120,260)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="labelfont" val="Dialog plain 7"/>
-    </comp>
-    <comp lib="1" loc="(800,480)" name="XOR Gate"/>
-    <comp lib="5" loc="(1460,1010)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="0" loc="(1120,1630)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="labelfont" val="Dialog plain 7"/>
-    </comp>
-    <comp lib="6" loc="(1750,1920)" name="Hex Digit Display"/>
-    <comp lib="5" loc="(1460,240)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="1" loc="(870,1690)" name="XOR Gate"/>
-    <comp lib="3" loc="(1180,660)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(870,1570)" name="XOR Gate"/>
-    <comp lib="1" loc="(770,1090)" name="XOR Gate"/>
-    <comp lib="1" loc="(680,1070)" name="AND Gate">
-      <a name="inputs" val="4"/>
-    </comp>
-    <comp lib="3" loc="(1180,860)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(790,1200)" name="XOR Gate"/>
-    <comp lib="1" loc="(780,760)" name="XOR Gate"/>
-    <comp lib="1" loc="(870,1360)" name="XOR Gate"/>
-    <comp lib="6" loc="(140,100)" name="Hex Digit Display"/>
     <comp lib="0" loc="(1700,1970)" name="Splitter">
       <a name="fanout" val="2"/>
       <a name="incoming" val="8"/>
@@ -601,42 +536,31 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="1" loc="(750,1580)" name="OR Gate">
-      <a name="inputs" val="6"/>
-    </comp>
-    <comp lib="6" loc="(190,100)" name="Hex Digit Display"/>
-    <comp lib="6" loc="(1800,1920)" name="Hex Digit Display"/>
-    <comp lib="0" loc="(1120,1420)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="labelfont" val="Dialog plain 7"/>
-    </comp>
-    <comp lib="0" loc="(1120,840)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="labelfont" val="Dialog plain 7"/>
-    </comp>
-    <comp lib="1" loc="(770,960)" name="XOR Gate"/>
-    <comp lib="1" loc="(670,890)" name="AND Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="1" loc="(740,1680)" name="AND Gate">
-      <a name="inputs" val="7"/>
-    </comp>
-    <comp lib="0" loc="(1210,160)" name="Pin">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="1" loc="(710,750)" name="NOT Gate"/>
-    <comp lib="1" loc="(750,1480)" name="AND Gate">
-      <a name="inputs" val="6"/>
-    </comp>
-    <comp lib="0" loc="(1120,1030)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="labelfont" val="Dialog plain 7"/>
-    </comp>
     <comp lib="1" loc="(680,750)" name="OR Gate"/>
-    <comp lib="3" loc="(1180,280)" name="Multiplexer">
+    <comp lib="5" loc="(1460,240)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="1" loc="(690,1170)" name="OR Gate">
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="1" loc="(870,1360)" name="XOR Gate"/>
+    <comp lib="3" loc="(1180,1050)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="enable" val="false"/>
     </comp>
+    <comp lib="1" loc="(760,1780)" name="NOT Gate"/>
+    <comp lib="0" loc="(1320,120)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(190,100)" name="Hex Digit Display"/>
+    <comp lib="1" loc="(710,1170)" name="NOT Gate"/>
+    <comp lib="1" loc="(860,1770)" name="XOR Gate"/>
+    <comp lib="1" loc="(670,670)" name="AND Gate"/>
+    <comp lib="1" loc="(770,1580)" name="NOT Gate"/>
+    <comp lib="1" loc="(750,1480)" name="AND Gate">
+      <a name="inputs" val="6"/>
+    </comp>
+    <comp lib="1" loc="(740,680)" name="XOR Gate"/>
     <comp lib="0" loc="(170,190)" name="Splitter">
       <a name="facing" val="north"/>
       <a name="fanout" val="2"/>
@@ -649,70 +573,146 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="5" loc="(1460,820)" name="D Flip-Flop">
+    <comp lib="5" loc="(1460,1010)" name="D Flip-Flop">
       <a name="enable" val="true"/>
     </comp>
-    <comp lib="0" loc="(1270,160)" name="Clock">
-      <a name="facing" val="south"/>
+    <comp lib="3" loc="(1180,860)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
     </comp>
-    <comp lib="0" loc="(1320,120)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="1" loc="(710,750)" name="NOT Gate"/>
+    <comp lib="1" loc="(800,480)" name="XOR Gate"/>
+    <comp lib="1" loc="(870,1690)" name="XOR Gate"/>
+    <comp lib="1" loc="(740,1780)" name="OR Gate">
+      <a name="inputs" val="7"/>
     </comp>
-    <comp lib="5" loc="(1460,620)" name="D Flip-Flop">
+    <comp lib="1" loc="(780,760)" name="XOR Gate"/>
+    <comp lib="5" loc="(1460,820)" name="D Flip-Flop">
       <a name="enable" val="true"/>
     </comp>
     <comp lib="1" loc="(760,1280)" name="AND Gate">
       <a name="inputs" val="5"/>
     </comp>
-    <comp lib="3" loc="(1180,1050)" name="Multiplexer">
+    <comp lib="0" loc="(1600,1970)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1120,450)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="labelfont" val="Dialog plain 7"/>
+    </comp>
+    <comp lib="1" loc="(720,520)" name="NOT Gate"/>
+    <comp lib="6" loc="(1750,1920)" name="Hex Digit Display"/>
+    <comp lib="1" loc="(680,1070)" name="AND Gate">
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1120,1030)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="labelfont" val="Dialog plain 7"/>
+    </comp>
+    <comp lib="5" loc="(1460,430)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="1" loc="(750,1370)" name="OR Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(740,900)" name="XOR Gate"/>
+    <comp lib="3" loc="(1180,1440)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="enable" val="false"/>
     </comp>
-    <comp lib="1" loc="(710,1170)" name="NOT Gate"/>
-    <comp lib="1" loc="(680,950)" name="OR Gate">
-      <a name="inputs" val="3"/>
+    <comp lib="1" loc="(770,1370)" name="NOT Gate"/>
+    <comp lib="1" loc="(870,1570)" name="XOR Gate"/>
+    <comp lib="1" loc="(770,1090)" name="XOR Gate"/>
+    <comp lib="6" loc="(1800,1920)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(1120,260)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="labelfont" val="Dialog plain 7"/>
     </comp>
-    <comp lib="1" loc="(740,900)" name="XOR Gate"/>
+    <comp lib="0" loc="(1120,1630)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="labelfont" val="Dialog plain 7"/>
+    </comp>
+    <comp lib="3" loc="(1180,280)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="5" loc="(1460,620)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="1" loc="(770,960)" name="XOR Gate"/>
     <comp lib="5" loc="(1460,1400)" name="D Flip-Flop">
       <a name="enable" val="true"/>
     </comp>
-    <comp lib="1" loc="(860,1770)" name="XOR Gate"/>
+    <comp lib="0" loc="(1210,160)" name="Pin">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="1" loc="(700,950)" name="NOT Gate"/>
+    <comp lib="3" loc="(1180,1650)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="1" loc="(680,950)" name="OR Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1120,840)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="labelfont" val="Dialog plain 7"/>
+    </comp>
+    <comp lib="1" loc="(670,890)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(740,1680)" name="AND Gate">
+      <a name="inputs" val="7"/>
+    </comp>
+    <comp lib="0" loc="(310,210)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="1" loc="(840,1290)" name="XOR Gate"/>
+    <comp lib="1" loc="(790,1200)" name="XOR Gate"/>
+    <comp lib="0" loc="(210,210)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(1120,1240)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="labelfont" val="Dialog plain 7"/>
+    </comp>
+    <comp lib="1" loc="(800,530)" name="XOR Gate"/>
     <comp lib="1" loc="(830,1470)" name="XOR Gate"/>
-    <comp lib="0" loc="(1120,450)" name="Pin">
+    <comp lib="3" loc="(1180,660)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(1120,640)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="labelfont" val="Dialog plain 7"/>
+    </comp>
+    <comp lib="3" loc="(1180,470)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(1270,160)" name="Clock">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(1460,1220)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="1" loc="(980,280)" name="NOT Gate"/>
+    <comp lib="5" loc="(1460,1610)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="6" loc="(140,100)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(1120,1420)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="labelfont" val="Dialog plain 7"/>
     </comp>
     <comp lib="3" loc="(1180,1260)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="enable" val="false"/>
-    </comp>
-    <comp lib="3" loc="(1180,470)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(1120,1240)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="labelfont" val="Dialog plain 7"/>
-    </comp>
-    <comp lib="5" loc="(1460,1610)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="1" loc="(700,950)" name="NOT Gate"/>
-    <comp lib="1" loc="(760,1780)" name="NOT Gate"/>
-    <comp lib="0" loc="(1120,640)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="labelfont" val="Dialog plain 7"/>
-    </comp>
-    <comp lib="1" loc="(980,280)" name="NOT Gate"/>
-    <comp lib="1" loc="(690,1170)" name="OR Gate">
-      <a name="inputs" val="4"/>
-    </comp>
-    <comp lib="3" loc="(1180,1650)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(750,1370)" name="OR Gate">
-      <a name="inputs" val="5"/>
     </comp>
   </circuit>
   <circuit name="8 bit register">
@@ -1148,79 +1148,10 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(1600,1970)" to="(1640,1970)"/>
     <wire from="(1640,1970)" to="(1660,1970)"/>
     <wire from="(790,1200)" to="(1120,1200)"/>
-    <comp lib="1" loc="(680,950)" name="OR Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="1" loc="(720,520)" name="NOT Gate"/>
-    <comp lib="1" loc="(750,1580)" name="OR Gate">
-      <a name="inputs" val="6"/>
-    </comp>
-    <comp lib="3" loc="(1180,860)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(740,680)" name="XOR Gate"/>
     <comp lib="1" loc="(870,1360)" name="XOR Gate"/>
-    <comp lib="1" loc="(770,960)" name="XOR Gate"/>
-    <comp lib="3" loc="(1180,1440)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="5" loc="(1460,240)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="5" loc="(1460,430)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="6" loc="(1740,1880)" name="Hex Digit Display"/>
-    <comp lib="6" loc="(190,100)" name="Hex Digit Display"/>
-    <comp lib="5" loc="(1460,1010)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="1" loc="(870,1690)" name="XOR Gate"/>
-    <comp lib="1" loc="(740,900)" name="XOR Gate"/>
-    <comp lib="0" loc="(1270,160)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(690,1170)" name="OR Gate">
-      <a name="inputs" val="4"/>
-    </comp>
-    <comp lib="1" loc="(680,750)" name="OR Gate"/>
-    <comp lib="3" loc="(1180,1050)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
     <comp lib="1" loc="(800,530)" name="XOR Gate"/>
-    <comp lib="1" loc="(710,750)" name="NOT Gate"/>
     <comp lib="6" loc="(140,100)" name="Hex Digit Display"/>
-    <comp lib="1" loc="(710,1170)" name="NOT Gate"/>
-    <comp lib="1" loc="(700,950)" name="NOT Gate"/>
-    <comp lib="0" loc="(1210,160)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="FunSel"/>
-    </comp>
-    <comp lib="0" loc="(1320,120)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="3" loc="(1180,660)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(760,1280)" name="AND Gate">
-      <a name="inputs" val="5"/>
-    </comp>
-    <comp lib="1" loc="(740,1680)" name="AND Gate">
-      <a name="inputs" val="7"/>
-    </comp>
-    <comp lib="1" loc="(830,1470)" name="XOR Gate"/>
-    <comp lib="1" loc="(860,1770)" name="XOR Gate"/>
-    <comp lib="3" loc="(1180,470)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(670,670)" name="AND Gate"/>
-    <comp lib="1" loc="(760,1780)" name="NOT Gate"/>
+    <comp lib="1" loc="(780,760)" name="XOR Gate"/>
     <comp lib="0" loc="(170,190)" name="Splitter">
       <a name="facing" val="north"/>
       <a name="fanout" val="2"/>
@@ -1233,19 +1164,53 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="1" loc="(780,760)" name="XOR Gate"/>
-    <comp lib="0" loc="(1120,260)" name="Constant">
-      <a name="value" val="0x0"/>
+    <comp lib="0" loc="(210,210)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Input"/>
     </comp>
-    <comp lib="1" loc="(770,1090)" name="XOR Gate"/>
+    <comp lib="6" loc="(1740,1880)" name="Hex Digit Display"/>
+    <comp lib="6" loc="(1690,1880)" name="Hex Digit Display"/>
+    <comp lib="5" loc="(1460,1400)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="5" loc="(1460,620)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="6" loc="(190,100)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(1270,160)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(700,950)" name="NOT Gate"/>
+    <comp lib="3" loc="(1180,1650)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
     <comp lib="1" loc="(680,1070)" name="AND Gate">
       <a name="inputs" val="4"/>
     </comp>
-    <comp lib="1" loc="(750,1370)" name="OR Gate">
-      <a name="inputs" val="5"/>
+    <comp lib="1" loc="(710,1170)" name="NOT Gate"/>
+    <comp lib="1" loc="(770,1370)" name="NOT Gate"/>
+    <comp lib="1" loc="(870,1690)" name="XOR Gate"/>
+    <comp lib="3" loc="(1180,1050)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
     </comp>
-    <comp lib="5" loc="(1460,1400)" name="D Flip-Flop">
+    <comp lib="1" loc="(760,1780)" name="NOT Gate"/>
+    <comp lib="5" loc="(1460,820)" name="D Flip-Flop">
       <a name="enable" val="true"/>
+    </comp>
+    <comp lib="1" loc="(720,520)" name="NOT Gate"/>
+    <comp lib="1" loc="(680,950)" name="OR Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(800,480)" name="XOR Gate"/>
+    <comp lib="1" loc="(790,1200)" name="XOR Gate"/>
+    <comp lib="1" loc="(670,670)" name="AND Gate"/>
+    <comp lib="0" loc="(310,210)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
     </comp>
     <comp lib="0" loc="(1660,1970)" name="Pin">
       <a name="facing" val="west"/>
@@ -1253,6 +1218,77 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Q"/>
+    </comp>
+    <comp lib="1" loc="(680,750)" name="OR Gate"/>
+    <comp lib="1" loc="(980,280)" name="NOT Gate"/>
+    <comp lib="1" loc="(710,750)" name="NOT Gate"/>
+    <comp lib="5" loc="(1460,430)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="3" loc="(1180,660)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="3" loc="(1180,1440)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="1" loc="(860,1770)" name="XOR Gate"/>
+    <comp lib="5" loc="(1460,240)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="3" loc="(1180,280)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="5" loc="(1460,1610)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="5" loc="(1460,1220)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="1" loc="(830,1470)" name="XOR Gate"/>
+    <comp lib="1" loc="(740,1780)" name="OR Gate">
+      <a name="inputs" val="7"/>
+    </comp>
+    <comp lib="0" loc="(1120,260)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(1210,160)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="FunSel"/>
+    </comp>
+    <comp lib="1" loc="(770,1090)" name="XOR Gate"/>
+    <comp lib="1" loc="(870,1570)" name="XOR Gate"/>
+    <comp lib="3" loc="(1180,1260)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="1" loc="(770,960)" name="XOR Gate"/>
+    <comp lib="1" loc="(740,1680)" name="AND Gate">
+      <a name="inputs" val="7"/>
+    </comp>
+    <comp lib="0" loc="(1600,1970)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="1" loc="(750,1370)" name="OR Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1320,120)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(670,890)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(740,900)" name="XOR Gate"/>
+    <comp lib="1" loc="(760,1280)" name="AND Gate">
+      <a name="inputs" val="5"/>
+    </comp>
+    <comp lib="1" loc="(750,1580)" name="OR Gate">
+      <a name="inputs" val="6"/>
     </comp>
     <comp lib="0" loc="(1640,1930)" name="Splitter">
       <a name="fanout" val="2"/>
@@ -1265,62 +1301,26 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="0" loc="(1600,1970)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="6" loc="(1690,1880)" name="Hex Digit Display"/>
-    <comp lib="3" loc="(1180,1650)" name="Multiplexer">
+    <comp lib="3" loc="(1180,860)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="enable" val="false"/>
     </comp>
-    <comp lib="1" loc="(770,1370)" name="NOT Gate"/>
-    <comp lib="5" loc="(1460,1610)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
+    <comp lib="1" loc="(690,1170)" name="OR Gate">
+      <a name="inputs" val="4"/>
     </comp>
-    <comp lib="3" loc="(1180,280)" name="Multiplexer">
+    <comp lib="3" loc="(1180,470)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="enable" val="false"/>
-    </comp>
-    <comp lib="1" loc="(670,890)" name="AND Gate">
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="1" loc="(800,480)" name="XOR Gate"/>
-    <comp lib="1" loc="(870,1570)" name="XOR Gate"/>
-    <comp lib="0" loc="(310,210)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="1" loc="(980,280)" name="NOT Gate"/>
-    <comp lib="5" loc="(1460,1220)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="5" loc="(1460,820)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
-    </comp>
-    <comp lib="1" loc="(840,1290)" name="XOR Gate"/>
-    <comp lib="3" loc="(1180,1260)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(210,210)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Input"/>
-    </comp>
-    <comp lib="1" loc="(770,1580)" name="NOT Gate"/>
-    <comp lib="1" loc="(740,1780)" name="OR Gate">
-      <a name="inputs" val="7"/>
-    </comp>
-    <comp lib="1" loc="(790,1200)" name="XOR Gate"/>
-    <comp lib="5" loc="(1460,620)" name="D Flip-Flop">
-      <a name="enable" val="true"/>
     </comp>
     <comp lib="1" loc="(750,1480)" name="AND Gate">
       <a name="inputs" val="6"/>
     </comp>
+    <comp lib="1" loc="(840,1290)" name="XOR Gate"/>
+    <comp lib="1" loc="(740,680)" name="XOR Gate"/>
+    <comp lib="5" loc="(1460,1010)" name="D Flip-Flop">
+      <a name="enable" val="true"/>
+    </comp>
+    <comp lib="1" loc="(770,1580)" name="NOT Gate"/>
   </circuit>
   <circuit name="2c">
     <a name="circuit" val="2c"/>
@@ -1358,29 +1358,24 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(240,230)" to="(280,230)"/>
     <wire from="(410,230)" to="(410,280)"/>
     <wire from="(410,230)" to="(440,230)"/>
-    <comp lib="0" loc="(180,150)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(130,290)" name="Constant">
+    <comp lib="3" loc="(190,310)" name="Multiplexer">
+      <a name="select" val="2"/>
       <a name="width" val="2"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(120,200)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
+      <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(100,380)" name="Pin">
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(80,460)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
     <comp loc="(520,220)" name="8 bit register"/>
-    <comp lib="3" loc="(190,310)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="2"/>
-      <a name="enable" val="false"/>
+    <comp loc="(380,220)" name="8 bit register"/>
+    <comp lib="0" loc="(610,360)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(180,150)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(570,300)" name="Splitter">
       <a name="fanout" val="2"/>
@@ -1401,12 +1396,17 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit14" val="1"/>
       <a name="bit15" val="1"/>
     </comp>
-    <comp lib="0" loc="(610,360)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
+    <comp lib="0" loc="(130,290)" name="Constant">
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
     </comp>
-    <comp loc="(380,220)" name="8 bit register"/>
+    <comp lib="0" loc="(120,200)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(80,460)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
   </circuit>
   <circuit name="ect">
     <a name="circuit" val="ect"/>
@@ -1545,50 +1545,36 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(1050,720)" to="(1110,720)"/>
     <wire from="(1050,730)" to="(1060,730)"/>
     <wire from="(1060,690)" to="(1060,730)"/>
-    <comp lib="7" loc="(401,152)" name="Text">
-      <a name="text" val="RegSel"/>
+    <comp lib="7" loc="(427,296)" name="Text">
+      <a name="text" val="OutASel"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp lib="3" loc="(940,680)" name="Multiplexer">
-      <a name="select" val="2"/>
+    <comp loc="(770,570)" name="8 bit register"/>
+    <comp lib="0" loc="(1180,750)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
       <a name="width" val="8"/>
-      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="7" loc="(372,225)" name="Text">
+      <a name="text" val="Input"/>
+      <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="0" loc="(480,320)" name="Pin">
       <a name="width" val="2"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp loc="(770,460)" name="8 bit register"/>
-    <comp lib="6" loc="(1060,690)" name="Hex Digit Display"/>
-    <comp lib="0" loc="(470,150)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="7" loc="(427,296)" name="Text">
-      <a name="text" val="OutASel"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(427,325)" name="Text">
-      <a name="text" val="OutBSel"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(480,290)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp loc="(770,570)" name="8 bit register"/>
-    <comp lib="0" loc="(480,220)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-    </comp>
     <comp lib="7" loc="(427,156)" name="Text">
       <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp lib="7" loc="(430,187)" name="Text">
-      <a name="text" val="CLK"/>
+    <comp loc="(770,460)" name="8 bit register"/>
+    <comp lib="0" loc="(710,150)" name="Splitter"/>
+    <comp loc="(770,350)" name="8 bit register"/>
+    <comp lib="7" loc="(433,255)" name="Text">
+      <a name="text" val="Funsel"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="6" loc="(1050,560)" name="Hex Digit Display"/>
+    <comp lib="6" loc="(1060,690)" name="Hex Digit Display"/>
     <comp lib="0" loc="(1020,610)" name="Splitter">
       <a name="fanout" val="2"/>
       <a name="incoming" val="8"/>
@@ -1600,35 +1586,50 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="0" loc="(710,150)" name="Splitter"/>
-    <comp lib="3" loc="(940,610)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="8"/>
-      <a name="enable" val="false"/>
-    </comp>
     <comp lib="0" loc="(1180,620)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(480,250)" name="Pin">
-      <a name="width" val="2"/>
+    <comp lib="0" loc="(480,220)" name="Pin">
+      <a name="width" val="8"/>
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="7" loc="(1151,536)" name="Text">
-      <a name="text" val="OutA"/>
-      <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="7" loc="(1155,667)" name="Text">
       <a name="text" val="OutB"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp loc="(770,240)" name="8 bit register"/>
-    <comp lib="6" loc="(1110,690)" name="Hex Digit Display"/>
-    <comp lib="6" loc="(1100,560)" name="Hex Digit Display"/>
-    <comp loc="(770,350)" name="8 bit register"/>
-    <comp lib="0" loc="(470,180)" name="Pin">
+    <comp lib="7" loc="(1151,536)" name="Text">
+      <a name="text" val="OutA"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="3" loc="(940,680)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="0" loc="(480,290)" name="Pin">
+      <a name="width" val="2"/>
       <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(480,250)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="3" loc="(940,610)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="6" loc="(1110,690)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(470,150)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp loc="(770,240)" name="8 bit register"/>
+    <comp lib="7" loc="(401,152)" name="Text">
+      <a name="text" val="RegSel"/>
+      <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="0" loc="(1030,740)" name="Splitter">
       <a name="fanout" val="2"/>
@@ -1641,18 +1642,17 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="0" loc="(1180,750)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="7" loc="(372,225)" name="Text">
-      <a name="text" val="Input"/>
+    <comp lib="7" loc="(430,187)" name="Text">
+      <a name="text" val="CLK"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp lib="7" loc="(433,255)" name="Text">
-      <a name="text" val="Funsel"/>
+    <comp lib="6" loc="(1100,560)" name="Hex Digit Display"/>
+    <comp lib="7" loc="(427,325)" name="Text">
+      <a name="text" val="OutBSel"/>
       <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(470,180)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
   <circuit name="register bank 2">
@@ -1661,6 +1661,29 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
+    <appear>
+      <rect fill="#ffffff" height="140" rx="5" ry="5" stroke="#000000" stroke-width="2" width="100" x="50" y="40"/>
+      <polyline fill="none" points="90,40 100,50" stroke="#000000"/>
+      <polyline fill="none" points="100,50 110,40" stroke="#000000"/>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="101" y="62">CLK</text>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="60" y="52">RS</text>
+      <text font-family="Dialog" font-size="12" text-anchor="end" x="65" y="82">In</text>
+      <text font-family="Dialog" font-size="12" text-anchor="start" x="56" y="112">FS</text>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="104" y="112">3R Bank</text>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="61" y="142">OCS</text>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="62" y="172">ODS</text>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="134" y="82">OutC</text>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="134" y="142">OutD</text>
+      <circ-port height="8" pin="470,150" width="8" x="46" y="46"/>
+      <circ-port height="8" pin="470,180" width="8" x="96" y="36"/>
+      <circ-port height="8" pin="480,220" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="480,250" width="8" x="46" y="106"/>
+      <circ-port height="8" pin="480,290" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="480,320" width="8" x="46" y="166"/>
+      <circ-port height="10" pin="1180,620" width="10" x="145" y="75"/>
+      <circ-port height="10" pin="1180,750" width="10" x="145" y="135"/>
+      <circ-anchor facing="east" height="6" width="6" x="147" y="57"/>
+    </appear>
     <wire from="(730,410)" to="(730,420)"/>
     <wire from="(730,290)" to="(780,290)"/>
     <wire from="(1010,610)" to="(1010,620)"/>
@@ -1752,85 +1775,13 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(1060,690)" to="(1060,730)"/>
     <wire from="(1050,720)" to="(1110,720)"/>
     <wire from="(1110,690)" to="(1110,720)"/>
-    <comp lib="0" loc="(560,420)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="2"/>
-      <a name="incoming" val="8"/>
-      <a name="appear" val="center"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-    </comp>
-    <comp lib="6" loc="(410,400)" name="Hex Digit Display"/>
-    <comp lib="0" loc="(480,250)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="7" loc="(730,339)" name="Text">
-      <a name="text" val="AR"/>
+    <comp lib="7" loc="(731,230)" name="Text">
+      <a name="text" val="PC"/>
       <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(470,180)" name="Pin">
-      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(470,150)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="7" loc="(427,326)" name="Text">
-      <a name="text" val="OutDSel"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="6" loc="(460,400)" name="Hex Digit Display"/>
-    <comp lib="0" loc="(710,150)" name="Splitter"/>
-    <comp lib="3" loc="(940,680)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="8"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="6" loc="(1050,560)" name="Hex Digit Display"/>
-    <comp lib="6" loc="(1100,560)" name="Hex Digit Display"/>
-    <comp lib="7" loc="(730,450)" name="Text">
-      <a name="text" val="SP"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(480,220)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="7" loc="(401,152)" name="Text">
-      <a name="text" val="RegSel"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(480,320)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(480,290)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="7" loc="(430,187)" name="Text">
-      <a name="text" val="CLK"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(1151,536)" name="Text">
-      <a name="text" val="OutC"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="0" loc="(1180,750)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp loc="(770,350)" name="8 bit register"/>
-    <comp lib="7" loc="(427,296)" name="Text">
-      <a name="text" val="OutCSel"/>
-      <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="0" loc="(1020,610)" name="Splitter">
       <a name="fanout" val="2"/>
@@ -1844,9 +1795,25 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit7" val="1"/>
     </comp>
     <comp loc="(770,460)" name="8 bit register"/>
-    <comp lib="7" loc="(433,255)" name="Text">
-      <a name="text" val="Funsel"/>
+    <comp lib="0" loc="(1180,620)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="7" loc="(730,339)" name="Text">
+      <a name="text" val="AR"/>
       <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(427,326)" name="Text">
+      <a name="text" val="OutDSel"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="6" loc="(460,400)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(710,150)" name="Splitter"/>
+    <comp lib="3" loc="(940,610)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+      <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(1030,740)" name="Splitter">
       <a name="fanout" val="2"/>
@@ -1859,30 +1826,86 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="bit6" val="1"/>
       <a name="bit7" val="1"/>
     </comp>
-    <comp lib="0" loc="(1180,620)" name="Pin">
+    <comp lib="3" loc="(940,680)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="8"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="6" loc="(1050,560)" name="Hex Digit Display"/>
+    <comp lib="6" loc="(1110,690)" name="Hex Digit Display"/>
+    <comp loc="(770,350)" name="8 bit register"/>
+    <comp lib="7" loc="(372,225)" name="Text">
+      <a name="text" val="Input"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(480,290)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(480,250)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(410,400)" name="Hex Digit Display"/>
+    <comp lib="7" loc="(1151,536)" name="Text">
+      <a name="text" val="OutC"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="0" loc="(480,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(470,180)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(433,255)" name="Text">
+      <a name="text" val="Funsel"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="6" loc="(1060,690)" name="Hex Digit Display"/>
+    <comp lib="7" loc="(430,187)" name="Text">
+      <a name="text" val="CLK"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp loc="(770,240)" name="8 bit register"/>
+    <comp lib="0" loc="(560,420)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+    </comp>
+    <comp lib="7" loc="(730,450)" name="Text">
+      <a name="text" val="SP"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="7" loc="(401,152)" name="Text">
+      <a name="text" val="RegSel"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="6" loc="(1100,560)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(1180,750)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="3" loc="(940,610)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="8"/>
-      <a name="enable" val="false"/>
+    <comp lib="7" loc="(427,296)" name="Text">
+      <a name="text" val="OutCSel"/>
+      <a name="font" val="Dialog plain 12"/>
     </comp>
     <comp lib="7" loc="(1155,667)" name="Text">
       <a name="text" val="OutD"/>
       <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp lib="7" loc="(731,230)" name="Text">
-      <a name="text" val="PC"/>
-      <a name="font" val="Dialog plain 12"/>
+    <comp lib="0" loc="(480,320)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="6" loc="(1060,690)" name="Hex Digit Display"/>
-    <comp lib="7" loc="(372,225)" name="Text">
-      <a name="text" val="Input"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="6" loc="(1110,690)" name="Hex Digit Display"/>
-    <comp loc="(770,240)" name="8 bit register"/>
   </circuit>
 </project>
