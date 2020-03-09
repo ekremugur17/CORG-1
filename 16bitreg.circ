@@ -9,7 +9,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   </lib>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -57,6 +63,22 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M106,61 Q110,71 114,61" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="59" stroke="#000000" stroke-width="2" width="119" x="51" y="60"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="61" y="84">In</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="109" y="94">16BR</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="62" y="104">FS</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="158" y="95">Q</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="110" y="114">E</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="110" y="76">CLK</text>
+      <circ-port height="8" pin="100,20" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="1020,210" width="8" x="106" y="116"/>
+      <circ-port height="8" pin="1130,240" width="8" x="106" y="56"/>
+      <circ-port height="8" pin="910,290" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="1680,190" width="10" x="165" y="85"/>
+      <circ-anchor facing="east" height="6" width="6" x="167" y="87"/>
+    </appear>
     <wire from="(1270,2550)" to="(1270,2570)"/>
     <wire from="(260,230)" to="(260,1190)"/>
     <wire from="(950,950)" to="(950,960)"/>
@@ -259,6 +281,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(780,1250)" to="(840,1250)"/>
     <wire from="(720,2470)" to="(780,2470)"/>
     <wire from="(730,2800)" to="(790,2800)"/>
+    <wire from="(1820,130)" to="(1930,130)"/>
     <wire from="(1210,1380)" to="(1250,1380)"/>
     <wire from="(1390,600)" to="(1430,600)"/>
     <wire from="(1720,2090)" to="(1720,3060)"/>
@@ -361,7 +384,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(340,350)" to="(1150,350)"/>
     <wire from="(800,1300)" to="(840,1300)"/>
     <wire from="(180,2690)" to="(1250,2690)"/>
-    <wire from="(1750,130)" to="(1930,130)"/>
     <wire from="(1780,3090)" to="(1910,3090)"/>
     <wire from="(1470,860)" to="(1600,860)"/>
     <wire from="(840,2710)" to="(1250,2710)"/>
@@ -529,6 +551,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(460,3080)" to="(1760,3080)"/>
     <wire from="(640,1940)" to="(660,1940)"/>
     <wire from="(700,2640)" to="(720,2640)"/>
+    <wire from="(1820,130)" to="(1820,190)"/>
     <wire from="(1200,660)" to="(1270,660)"/>
     <wire from="(320,230)" to="(320,270)"/>
     <wire from="(510,2530)" to="(510,2630)"/>
@@ -633,6 +656,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(900,1330)" to="(900,1350)"/>
     <wire from="(820,2370)" to="(1250,2370)"/>
     <wire from="(760,1940)" to="(780,1940)"/>
+    <wire from="(1750,130)" to="(1820,130)"/>
     <wire from="(1700,1970)" to="(1700,3050)"/>
     <wire from="(510,2460)" to="(660,2460)"/>
     <wire from="(640,2140)" to="(660,2140)"/>
@@ -731,6 +755,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1200,1250)" to="(1270,1250)"/>
     <wire from="(950,1110)" to="(1170,1110)"/>
     <wire from="(1390,480)" to="(1390,600)"/>
+    <wire from="(1680,190)" to="(1820,190)"/>
     <wire from="(810,770)" to="(840,770)"/>
     <wire from="(860,2000)" to="(860,2060)"/>
     <wire from="(1310,910)" to="(1310,1070)"/>
@@ -871,94 +896,25 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1390,100)" to="(1730,100)"/>
     <wire from="(750,1380)" to="(760,1380)"/>
     <wire from="(1450,90)" to="(1730,90)"/>
-    <comp lib="1" loc="(820,2180)" name="XOR Gate">
+    <comp lib="1" loc="(870,1230)" name="AND Gate">
       <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
+      <a name="inputs" val="6"/>
     </comp>
-    <comp lib="0" loc="(1230,2680)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(670,2890)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1220,600)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(1230,1370)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(700,2640)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(820,2890)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(510,2530)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="2" loc="(1290,2110)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="2" loc="(1290,750)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="0" loc="(100,20)" name="Pin">
+    <comp lib="0" loc="(1680,190)" name="Pin">
+      <a name="output" val="true"/>
       <a name="width" val="16"/>
       <a name="tristate" val="false"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(940,1320)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
+    <comp lib="4" loc="(1470,2350)" name="D Flip-Flop"/>
+    <comp lib="6" loc="(1371,168)" name="Text">
+      <a name="text" val="REGISTER"/>
+      <a name="font" val="SansSerif plain 36"/>
     </comp>
-    <comp lib="4" loc="(1470,1370)" name="D Flip-Flop"/>
-    <comp lib="5" loc="(1270,80)" name="Hex Digit Display"/>
-    <comp lib="4" loc="(1470,2680)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(510,2000)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(870,560)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(820,2410)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1470,600)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(820,2320)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(830,2760)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="2" loc="(1290,1840)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1230,1820)" name="Constant">
+    <comp lib="5" loc="(1330,80)" name="Hex Digit Display"/>
+    <comp lib="5" loc="(1390,80)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(1230,2350)" name="Constant">
       <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(510,2250)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(870,630)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(870,1060)" name="AND Gate">
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="4" loc="(1460,1970)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(880,1130)" name="NOR Gate">
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="1" loc="(870,900)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="4"/>
     </comp>
     <comp lib="0" loc="(910,290)" name="Pin">
       <a name="width" val="2"/>
@@ -966,182 +922,53 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Function Selector"/>
       <a name="labelfont" val="SansSerif plain 36"/>
     </comp>
-    <comp lib="0" loc="(160,210)" name="Splitter">
-      <a name="facing" val="south"/>
+    <comp lib="4" loc="(1470,2860)" name="D Flip-Flop"/>
+    <comp lib="2" loc="(1290,2110)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1930,2950)" name="Splitter">
+      <a name="facing" val="west"/>
       <a name="fanout" val="16"/>
       <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="1" loc="(820,2580)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1470,2220)" name="D Flip-Flop"/>
-    <comp lib="4" loc="(1470,860)" name="D Flip-Flop"/>
-    <comp lib="2" loc="(1290,2880)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="5" loc="(1390,80)" name="Hex Digit Display"/>
-    <comp lib="1" loc="(510,2710)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="4" loc="(1460,480)" name="D Flip-Flop"/>
-    <comp lib="6" loc="(463,173)" name="Text">
-      <a name="text" val="INPUT"/>
-      <a name="font" val="SansSerif plain 36"/>
-    </comp>
-    <comp lib="5" loc="(560,80)" name="Hex Digit Display"/>
-    <comp lib="5" loc="(1330,80)" name="Hex Digit Display"/>
-    <comp lib="1" loc="(930,1410)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="2" loc="(1290,350)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="1" loc="(930,910)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(800,1490)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="7"/>
-    </comp>
-    <comp lib="1" loc="(870,510)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(930,770)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(710,2820)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(910,2930)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(820,2130)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(820,2060)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1470,2860)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(1230,1970)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="5" loc="(500,80)" name="Hex Digit Display"/>
-    <comp lib="1" loc="(510,2890)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="2" loc="(1290,1390)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1470,730)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(930,1230)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(700,1930)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(790,1410)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="7"/>
     </comp>
-    <comp lib="4" loc="(1470,1020)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(690,2580)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(510,2380)" name="NOT Gate">
+    <comp lib="1" loc="(510,2120)" name="NOT Gate">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="1" loc="(700,2760)" name="AND Gate">
+    <comp lib="6" loc="(463,173)" name="Text">
+      <a name="text" val="INPUT"/>
+      <a name="font" val="SansSerif plain 36"/>
+    </comp>
+    <comp lib="5" loc="(500,80)" name="Hex Digit Display"/>
+    <comp lib="1" loc="(820,2130)" name="XOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(700,2470)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="2" loc="(1290,1210)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="1" loc="(820,1930)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(740,2930)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1470,2350)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(690,2010)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="2" loc="(1290,2530)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="1" loc="(940,960)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1230,1190)" name="Constant">
+    <comp lib="0" loc="(1230,2680)" name="Constant">
       <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(940,690)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="5" loc="(440,80)" name="Hex Digit Display"/>
-    <comp lib="1" loc="(870,760)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
+    <comp lib="2" loc="(1290,2240)" name="Multiplexer">
+      <a name="select" val="2"/>
     </comp>
-    <comp lib="0" loc="(1230,730)" name="Constant">
+    <comp lib="0" loc="(1220,330)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="4" loc="(1470,1190)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(870,1060)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="4" loc="(1470,2220)" name="D Flip-Flop"/>
     <comp lib="0" loc="(1230,2510)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="1" loc="(930,1070)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(700,2190)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1460,1820)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(690,2270)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(880,680)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(690,2130)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1230,2350)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(820,2270)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(830,2810)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="5" loc="(380,80)" name="Hex Digit Display"/>
-    <comp lib="1" loc="(940,690)" name="XOR Gate">
+    <comp lib="1" loc="(820,2460)" name="XOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
@@ -1149,81 +976,83 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(700,2070)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1470,2090)" name="D Flip-Flop"/>
-    <comp lib="4" loc="(1460,330)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(690,2410)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(880,970)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="4"/>
-    </comp>
-    <comp lib="0" loc="(1230,860)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(1290,620)" name="Multiplexer">
+    <comp lib="2" loc="(1290,2530)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
-    <comp lib="1" loc="(940,1160)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(820,2460)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1230,1020)" name="Constant">
+    <comp lib="0" loc="(1230,1970)" name="Constant">
       <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(690,2130)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(880,1310)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="6"/>
+    </comp>
+    <comp lib="1" loc="(930,770)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,2270)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(1130,240)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="CLK"/>
       <a name="labelfont" val="SansSerif plain 36"/>
     </comp>
-    <comp lib="1" loc="(870,1230)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="6"/>
-    </comp>
-    <comp lib="0" loc="(1220,480)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(880,1310)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="6"/>
-    </comp>
-    <comp lib="1" loc="(700,2330)" name="NOR Gate">
+    <comp lib="1" loc="(700,2470)" name="NOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(880,810)" name="NOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(1020,210)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="ENABLE"/>
-      <a name="labelfont" val="SansSerif plain 36"/>
-    </comp>
-    <comp lib="1" loc="(820,2010)" name="XOR Gate">
+    <comp lib="1" loc="(700,2070)" name="NOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="2" loc="(1290,1990)" name="Multiplexer">
+    <comp lib="2" loc="(1290,1210)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
-    <comp lib="0" loc="(1230,2090)" name="Constant">
-      <a name="value" val="0x0"/>
+    <comp lib="1" loc="(880,970)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="4"/>
     </comp>
     <comp lib="2" loc="(1290,1040)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
-    <comp lib="2" loc="(1290,880)" name="Multiplexer">
-      <a name="select" val="2"/>
+    <comp lib="1" loc="(820,2410)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(830,2760)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="5" loc="(380,80)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(1230,1370)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(1270,80)" name="Hex Digit Display"/>
+    <comp lib="1" loc="(870,900)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="1" loc="(870,560)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(870,630)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(930,1230)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1470,2090)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(1230,2220)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(240,20)" name="Splitter">
       <a name="facing" val="south"/>
@@ -1245,7 +1074,63 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit14" val="3"/>
       <a name="bit15" val="3"/>
     </comp>
-    <comp lib="1" loc="(940,820)" name="XOR Gate">
+    <comp lib="2" loc="(1290,500)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,2320)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="2" loc="(1290,620)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1220,480)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(1230,2860)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(100,20)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(1220,600)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(1230,1820)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,210)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="2" loc="(1290,880)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="2" loc="(1290,1390)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="5" loc="(560,80)" name="Hex Digit Display"/>
+    <comp lib="1" loc="(930,640)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(940,1160)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(1180,350)" name="NOT Gate"/>
+    <comp lib="1" loc="(690,2010)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1470,860)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(510,2380)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="4" loc="(1460,330)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(930,910)" name="XOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
@@ -1253,37 +1138,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="5" loc="(1450,80)" name="Hex Digit Display"/>
-    <comp lib="1" loc="(820,550)" name="NOT Gate"/>
-    <comp lib="1" loc="(930,640)" name="XOR Gate">
+    <comp lib="1" loc="(690,2270)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1470,2510)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(820,1880)" name="XOR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(510,2120)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="1" loc="(870,1580)" name="NOT Gate">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(1930,2950)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="2" loc="(1290,2240)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="1" loc="(1180,350)" name="NOT Gate"/>
-    <comp lib="2" loc="(1290,2700)" name="Multiplexer">
-      <a name="select" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1230,2220)" name="Constant">
-      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(1750,130)" name="Splitter">
       <a name="facing" val="west"/>
@@ -1306,25 +1163,199 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit14" val="3"/>
       <a name="bit15" val="3"/>
     </comp>
-    <comp lib="0" loc="(1230,2860)" name="Constant">
+    <comp lib="2" loc="(1290,1840)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1470,1370)" name="D Flip-Flop"/>
+    <comp lib="2" loc="(1290,350)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,2180)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1460,480)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(690,2410)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(670,2890)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(510,2710)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(830,2810)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,1880)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="2" loc="(1290,750)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="5" loc="(1450,80)" name="Hex Digit Display"/>
+    <comp lib="2" loc="(1290,2880)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,2060)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1470,1020)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(930,1410)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(740,2930)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(870,760)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="2" loc="(1290,2370)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="1" loc="(510,2000)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(870,1580)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(870,510)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1470,1190)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(1230,1020)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="6" loc="(1371,168)" name="Text">
-      <a name="text" val="REGISTER"/>
-      <a name="font" val="SansSerif plain 36"/>
+    <comp lib="4" loc="(1460,1970)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(700,2760)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1470,2510)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(910,2930)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1230,1190)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(690,2580)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,2010)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(940,1320)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1460,1820)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(510,2250)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(880,1130)" name="NOR Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="0" loc="(1020,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="ENABLE"/>
+      <a name="labelfont" val="SansSerif plain 36"/>
     </comp>
     <comp lib="1" loc="(690,1870)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(1220,330)" name="Constant">
+    <comp lib="1" loc="(880,680)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,550)" name="NOT Gate"/>
+    <comp lib="1" loc="(700,2190)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(940,820)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(510,2890)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="4" loc="(1470,2680)" name="D Flip-Flop"/>
+    <comp lib="4" loc="(1470,730)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(930,1070)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="2" loc="(1290,1990)" name="Multiplexer">
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="1" loc="(800,1490)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="7"/>
+    </comp>
+    <comp lib="1" loc="(820,2890)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(700,2330)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1230,730)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="2" loc="(1290,500)" name="Multiplexer">
+    <comp lib="1" loc="(710,2820)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(880,810)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(940,960)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(820,1930)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1230,2090)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(510,2530)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(700,2640)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1230,860)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(1290,2700)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
-    <comp lib="2" loc="(1290,2370)" name="Multiplexer">
-      <a name="select" val="2"/>
+    <comp lib="1" loc="(700,1930)" name="NOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1470,600)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(820,2580)" name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
 </project>
